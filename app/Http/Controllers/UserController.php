@@ -5,9 +5,9 @@ namespace App\Http\Controllers;
     use App\Http\Controllers\Controller;
     use Illuminate\Support\Facades\Auth; 
     use App\models\User;
-    use Validator;
     use Illuminate\Http\Request;
- 
+    use Illuminate\Support\Facades\Validator;
+
     class UserController extends Controller
     {
         public $successStatus = 200;
