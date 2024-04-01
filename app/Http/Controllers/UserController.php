@@ -23,7 +23,7 @@ namespace App\Http\Controllers;
         {
             if(Auth::attempt(['email' => request('email'), 'password' => request('password')])){ 
                 $user = Auth::user(); 
-                // $success['token'] =  $user->createToken('nimisHair')-> accessToken; 
+                $success['token'] =  $user->createToken('nimisHair')-> accessToken; 
                 $success['userId'] = $user->id;
                 return response()->json(['success' => $success], $this-> successStatus); 
             } 
@@ -41,9 +41,9 @@ namespace App\Http\Controllers;
                 'c_password' => 'required|same:password',
             ]);
  
-            // if ($validator->fails()) {
-            //     return redirect()->back()->withErrors();
-            // }
+            if ($validator->fails()) {
+                return redirect()->back()->withErrors();
+            }
  
             $data = $request->only(['name', 'email', 'password']);
             $data['password'] = bcrypt($data['password']);

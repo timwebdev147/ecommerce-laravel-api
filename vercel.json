@@ -21,6 +21,14 @@
 
         "CACHE_DRIVER": "array",
         "LOG_CHANNEL": "stderr",
-        "SESSION_DRIVER": "array"
+        "SESSION_DRIVER": "array",
+
+
+        "DB_CONNECTION": "mysql",
+        "DB_HOST": "sql.freedb.tech",
+        "DB_PORT": "3306",
+        "DB_DATABASE": "freedb_Nimishair",
+        "DB_USERNAME": "freedb_Nimishair",
+        "DB_PASSWORD": "CAK6?V#XkWZUZe#"
     }
 }
